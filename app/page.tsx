@@ -102,7 +102,7 @@ const HomePage = () => {
                 <p className=" opacity-50">UI/UX Designer</p>
               </div>
             </div>
-            <p className=" text-sm opacity-50">2020–2021</p>
+            <p className=" text-sm opacity-50">2020 – 2021</p>
           </div>
         </div>
       </section>
