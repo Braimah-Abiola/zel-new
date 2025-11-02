@@ -76,12 +76,12 @@ const Sidebar = () => {
                             </Link>
                         </ul>
 
-                        <ul className="flex flex-col">
+                        <ul className="flex flex-col text-sm">
                             <span className=" opacity-50 mb-2 px-3 text-xs">Contact</span>
                             <Link href="mailto:denzelobeng421@gmail.com">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
-                                        <LuAtSign className=" size-4 md:size-5" />
+                                        <LuAtSign className=" size-4" />
                                         <p>Email</p>
                                     </div>
                                     <ArrowUpRight className=" size-4 opacity-50" />
@@ -90,7 +90,7 @@ const Sidebar = () => {
                             <Link href="http://linkedin.com/in/alan-obeng-peprah-b8b360310">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
-                                        <PiLinkedinLogoLight className=" size-4 md:size-5" />
+                                        <PiLinkedinLogoLight className=" size-4" />
                                         <p>LinkedIn</p>
                                     </div>
                                     <ArrowUpRight className=" size-4 opacity-50" />
@@ -99,7 +99,7 @@ const Sidebar = () => {
                             <Link href="https://twitter.com/imdenze_l">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
-                                        <RiTwitterXFill className=" size-4 md:size-5" />
+                                        <RiTwitterXFill className=" size-4" />
                                         <p>X</p>
                                     </div>
                                     <ArrowUpRight className=" size-4 opacity-50" />
@@ -108,7 +108,7 @@ const Sidebar = () => {
                             <Link href="https://drive.google.com/file/d/1YERrrrWqeSZZn3CaB_jXQJ0H-hPecbIG/view?usp=drive_link">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
-                                        <PiNotebook className=" size-4 md:size-5" />
+                                        <PiNotebook className=" size-4" />
                                         <p>Resume</p>
                                     </div>
                                     <ArrowUpRight className=" size-4 opacity-50" />
