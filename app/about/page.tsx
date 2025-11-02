@@ -25,6 +25,9 @@ const AboutPage = () => {
 
                     <SidebarMobile />
                 </div>
+                <div className=" flex items-center justify-center text-white text-sm py-1 bg-[#399E03]">
+                    <p>Update coming soon.</p>
+                </div>
             </section>
             <section className=" hidden md:block sticky top-0 z-20 text-sm">
                 <div className=" w-full flex items-center justify-between px-4 bg-muted py-1.5">

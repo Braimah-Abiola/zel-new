@@ -28,6 +28,9 @@ const AstraeCaseStudyPage = () => {
 
                     <SidebarMobile />
                 </div>
+                <div className=" flex items-center justify-center text-white text-sm py-1 bg-[#399E03]">
+                    <p>Update coming soon.</p>
+                </div>
             </section>
             <section className=" hidden md:block sticky top-0 z-50 text-sm">
                 <div className=" w-full flex items-center justify-between px-4 bg-muted py-1.5">
@@ -48,9 +51,11 @@ const AstraeCaseStudyPage = () => {
                 </div>
             </section>
             <section>
-                <div className=" relative w-full h-auto aspect-video md:aspect-auto md:h-[75dvh]">
-                    <Image fill src="/assets/astrae.png" alt="Astrae Cover" className=" object-cover object-top" />
-                </div>
+                <Link href="https://astrae.design">
+                    <div className=" relative w-full h-auto aspect-video md:aspect-auto md:h-[75dvh]">
+                        <Image fill src="/assets/astrae.png" alt="Astrae Cover" className=" object-cover object-top" />
+                    </div>
+                </Link>
             </section>
 
             <section className=" px-4 md:px-20 pt-8 md:pt-16">
@@ -175,6 +180,9 @@ const AstraeCaseStudyPage = () => {
                                     </ul>
                                 </div>
                             </div>
+                            <Link href="https://astrae.design">
+                                <Button className=" w-full bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90">Visit Website</Button>
+                            </Link>
                         </div>
                     </div>
                 </div>
