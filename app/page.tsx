@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/sections/project-card";
+import { SidebarMobile } from "@/sections/sidebar-mobile";
 import { Slash } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +13,23 @@ import { RiHome5Line } from "react-icons/ri";
 const HomePage = () => {
   return (
     <div className=" text-sm">
-      <section className=" sticky top-0 z-20">
+      <section className=" md:hidden sticky top-0 z-50">
+        <div className=" w-full flex items-center justify-between px-4 py-2 bg-muted">
+          <Link href="/">
+            <div className="w-32 h-8 relative">
+              <Image
+                fill
+                src="/assets/logo.png"
+                alt="Zel Logo"
+                className="object-contain"
+              />
+            </div>
+          </Link>
+
+          <SidebarMobile />
+        </div>
+      </section>
+      <section className=" hidden md:block sticky top-0 z-20">
         <div className=" w-full flex items-center justify-between px-4 bg-muted py-1.5">
           <Link href="#">
             <span className="flex items-center px-2 py-1 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
@@ -35,8 +52,8 @@ const HomePage = () => {
       </section>
 
 
-      <section className=" w-full px-20 py-12">
-        <Image width={52} height={52} src="/assets/zel.png" alt="Denzel" />
+      <section className=" w-full px-4 md:px-20 py-8 md:py-12">
+        <Image width={52} height={52} src="/assets/zel.png" className=" scale-90  md:scale-100" alt="Denzel" />
         <h1 className=" mt-4 font-semibold text-lg md:text-2xl tracking-tighter">UI/UX designer with focus on product thinking and craft.</h1>
 
         <div className=" mt-2 opacity-80">
@@ -65,7 +82,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className=" w-full px-20">
+      <section className=" w-full px-4  md:px-20">
         <span className=" opacity-50">Team</span>
 
         <div>
@@ -78,7 +95,7 @@ const HomePage = () => {
                 <p className=" opacity-50">Lead Designer</p>
               </div>
             </div>
-            <p className=" text-sm opacity-50">2025</p>
+            <p className="  text-xs md:text-sm opacity-50">2025</p>
           </div>
 
           <div className=" w-full border-b flex items-center justify-between py-2.5">
@@ -90,7 +107,7 @@ const HomePage = () => {
                 <p className=" opacity-50">Lead Product Designer</p>
               </div>
             </div>
-            <p className=" text-sm opacity-50">2024</p>
+            <p className="  text-xs md:text-sm opacity-50">2024</p>
           </div>
 
           <div className=" w-full flex items-center justify-between py-2.5">
@@ -102,12 +119,12 @@ const HomePage = () => {
                 <p className=" opacity-50">UI/UX Designer</p>
               </div>
             </div>
-            <p className=" text-sm opacity-50">2020 – 2021</p>
+            <p className="  text-xs md:text-sm opacity-50">2020 – 2021</p>
           </div>
         </div>
       </section>
 
-      <section className=" w-full px-20 mt-12 flex flex-col gap-8">
+      <section className=" w-full px-4  md:px-20 mt-12 flex flex-col gap-8">
         <Link href="/case-study/astrae">
           <ProjectCard image="/assets/astrae-showcase.png" title="Astrae Design" description="Revamped website and increased conversions" role="Lead Designer" />
         </Link>
@@ -118,20 +135,22 @@ const HomePage = () => {
 
       </section>
 
-      <section className=" w-full bg-muted p-8 mt-12">
+      <section className=" w-full bg-muted p-4 md:p-8 mt-12">
         <h4 className=" text-base font-semibold text-white">Get in touch :–)</h4>
-        <div className=" inline-flex items-center gap-1 text-sm">
+        <div className=" md:inline-flex items-center gap-1 text-sm">
           <span className="opacity-70">I can be easily reached at your convenience via</span>
-          <Link href="" className=" opacity-100">
-            <p className=" underline underline-offset-2">WhatsApp</p>
-          </Link>
-          <p>or</p>
-          <Link href="" className=" opacity-100">
-            <p className=" underline underline-offset-2">Email</p>
-          </Link>
+          <div className=" inline-flex items-center gap-1">
+            <Link href="" className=" opacity-100">
+              <p className=" underline underline-offset-2">WhatsApp</p>
+            </Link>
+            <p>or</p>
+            <Link href="" className=" opacity-100">
+              <p className=" underline underline-offset-2">Email</p>
+            </Link>
+          </div>
 
         </div>
-        <div className=" flex items-center gap-2 mt-6">
+        <div className=" flex items-center gap-1  md:gap-2 mt-6">
           <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
           <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
         </div>

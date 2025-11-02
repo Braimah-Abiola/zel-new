@@ -1,14 +1,27 @@
-import { ArrowUpRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+    Sheet,
+    SheetContent,
+    SheetTitle,
+    SheetTrigger
+} from "@/components/ui/sheet";
+
+import { ArrowUpRight, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { LuAtSign } from "react-icons/lu";
 import { PiBinoculars, PiHandFist, PiHandshakeLight, PiLinkedinLogoLight, PiNotebook, PiPaintBrushLight, PiPencilCircleLight, PiSoccerBall } from "react-icons/pi";
 import { RiTwitterXFill } from "react-icons/ri";
 
-const Sidebar = () => {
+
+export function SidebarMobile() {
     return (
-        <section className=" hidden md:block">
-            <aside className="fixed left-0 top-0 h-screen w-60 bg-muted border-r border-r-white/10 z-40">
+        <Sheet>
+            <SheetTrigger asChild>
+                <Button size="icon-lg" variant="outline"><Menu /></Button>
+            </SheetTrigger>
+            <SheetContent side="left">
+                <SheetTitle className=" hidden">Edit profile</SheetTitle>
                 <div className="flex flex-col h-full">
                     <Link href="/">
                         <div className="w-32 h-8 relative mx-6 my-4">
@@ -118,9 +131,7 @@ const Sidebar = () => {
                     </nav>
                     <span className=" p-6 opacity-70 text-xs">© Denzel Obeng, 2025</span>
                 </div>
-            </aside>
-        </section>
-    );
+            </SheetContent>
+        </Sheet>
+    )
 }
-
-export default Sidebar;

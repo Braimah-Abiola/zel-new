@@ -9,7 +9,7 @@ const ProjectCard = ({ title, description, role, image }: { title: string, descr
             </div>
             <p className=" mt-2 opacity-70">{description}</p>
             <div className=" w-full h-auto aspect-video relative mt-6">
-                <Image fill src={image} alt={title} className="rounded-xl object-cover" />
+                <Image fill src={image} alt={title} className=" rounded-md md:rounded-xl object-cover" />
             </div>
         </div>
     );

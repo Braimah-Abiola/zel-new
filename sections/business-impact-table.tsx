@@ -30,12 +30,12 @@ const results = [
 
 export function BusinessImpactTable() {
     return (
-        <section className=" w-full relative py-12 px-20">
-            <h3 className=" text-2xl font-semibold text-white tracking-tight mb-2">
+        <section className=" w-screen relative py-12 px-4 md:px-20">
+            <h3 className=" text-lg md:text-2xl font-semibold text-white tracking-tight md:mb-2">
                 Business Impact Achievements
             </h3>
 
-            <div className=" border mt-6 rounded-lg md:rounded-xl overflow-clip">
+            <div className=" border mt-2 md:mt-6 rounded-md md:rounded-xl overflow-clip">
                 <Table className="">
                     <TableHeader>
                         <TableRow>

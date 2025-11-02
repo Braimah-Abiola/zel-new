@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import BeforeAndAfter from "@/sections/before-after";
 import { BusinessImpactTable } from "@/sections/business-impact-table";
+import { SidebarMobile } from "@/sections/sidebar-mobile";
 import { TransformationTable } from "@/sections/transformation-table";
 import { Slash } from "lucide-react";
 import Image from "next/image";
@@ -12,7 +13,23 @@ import { LuAtSign } from "react-icons/lu";
 const AstraeCaseStudyPage = () => {
     return (
         <div>
-            <section className=" sticky top-0 z-50 text-sm">
+            <section className=" md:hidden sticky top-0 z-50">
+                <div className=" w-full flex items-center justify-between px-4 py-2 bg-muted">
+                    <Link href="/">
+                        <div className="w-32 h-8 relative">
+                            <Image
+                                fill
+                                src="/assets/logo.png"
+                                alt="Zel Logo"
+                                className="object-contain"
+                            />
+                        </div>
+                    </Link>
+
+                    <SidebarMobile />
+                </div>
+            </section>
+            <section className=" hidden md:block sticky top-0 z-50 text-sm">
                 <div className=" w-full flex items-center justify-between px-4 bg-muted py-1.5">
                     <Link href="#">
                         <span className="flex items-center px-2 py-1 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
@@ -31,16 +48,16 @@ const AstraeCaseStudyPage = () => {
                 </div>
             </section>
             <section>
-                <div className=" relative w-full h-[75dvh]">
+                <div className=" relative w-full h-auto aspect-video md:aspect-auto md:h-[75dvh]">
                     <Image fill src="/assets/astrae.png" alt="Astrae Cover" className=" object-cover object-top" />
                 </div>
             </section>
 
-            <section className=" px-20 pt-16">
+            <section className=" px-4 md:px-20 pt-8 md:pt-16">
                 <div className="flex flex-col-reverse lg:flex-row gap-12 lg:gap-20">
                     <div className="w-full lg:w-2/3">
                         <div className=" mb-4 md:mb-10">
-                            <h2 className="text-2xl font-semibold text-white tracking-tight">Challenge</h2>
+                            <h2 className=" text-lg md:text-2xl font-semibold text-white tracking-tight">Challenge</h2>
                             <p className="text-foreground mt-0.5 opacity-70 mb-4 text-sm">
                                 Astrae is a Next.js landing page template and component library. By the time they engaged Bhyte Software, the marketing site had grown organically but suffered from an outdated layout, inconsistent components, and no scalable blog CMS. Despite a strong content pipeline, mobile performance and conversions lagged behind benchmarks.
                             </p>
@@ -90,7 +107,7 @@ const AstraeCaseStudyPage = () => {
                         </div>
 
 
-                        <div className="w-full h-auto aspect-video relative overflow-clip rounded-lg  mb-4 md:mb-10">
+                        <div className="w-full h-auto aspect-video relative overflow-clip  rounded-md md:rounded-lg  mb-4 md:mb-10">
                             <Image
                                 src="/assets/astrae-showcase.png"
                                 alt="Astrae dashboard image"
@@ -100,7 +117,7 @@ const AstraeCaseStudyPage = () => {
                         </div>
 
                         <div className=" mb-4 md:mb-10">
-                            <h2 className=" text-2xl font-semibold text-white tracking-tight">Solution</h2>
+                            <h2 className=" text-lg md:text-2xl font-semibold text-white tracking-tight">Solution</h2>
                             <p className="text-foreground mt-0.5 opacity-70 mb-4 text-sm">
                                 We began with a 2-week discovery sprint—analytics audit, content inventory, and IA mapping—then shipped a cohesive visual system: typography, spacing, and components that express Astrae’s brand with clarity and speed.
                             </p>
@@ -120,7 +137,7 @@ const AstraeCaseStudyPage = () => {
 
                     <div className="w-full lg:w-1/3">
                         <div className="sticky top-32 flex flex-col gap-3 md:gap-4">
-                            <div className="bg-muted border rounded-lg p-4 md:p-6">
+                            <div className="bg-muted border  rounded-md md:rounded-lg p-4 md:p-6">
                                 <div className="flex items-center gap-3 mb-4">
                                     <Image
                                         src="/assets/astrae-icon.png"
@@ -135,11 +152,11 @@ const AstraeCaseStudyPage = () => {
                                     </div>
                                 </div>
 
-                                <p className="text-sm md:text-[15px] text-foreground text-balance">
+                                <p className="text-sm md:text-[15px] text-foreground">
                                     Ship Your Next.js Sites 10X Faster. Astrae is a landing page template and component library built with Next.js, Tailwind CSS, Shadcn and Framer Motion.
                                 </p>
                             </div>
-                            <div className="bg-muted border rounded-lg p-4 md:p-6">
+                            <div className="bg-muted border  rounded-md md:rounded-lg p-4 md:p-6">
                                 <div className="space-y-3">
                                     <h4 className="font-medium">The Results</h4>
                                     <ul className="space-y-1.5 list-disc list-inside text-sm md:text-[15px] text-foreground opacity-70">
@@ -169,50 +186,50 @@ const AstraeCaseStudyPage = () => {
 
             <BusinessImpactTable />
 
-            <section className=" w-full px-20">
-                <h3 className=" text-2xl font-semibold text-white tracking-tight mb-2">
+            <section className=" w-full px-4 md:px-20">
+                <h3 className=" text-lg md:text-2xl font-semibold text-white tracking-tight mb-2">
                     Key Features Implemented
                 </h3>
 
                 <div className=" grid grid-cols-1 md:grid-cols-2 md:gap-x-12 mt-4">
                     <div>
-                        <span className="text-xl font-semibold tracking-tighter">
+                        <span className=" text-base md:text-xl font-semibold tracking-tighter">
                             Modular Marketing UI Library
                         </span>
-                        <p className="text-foreground mt-0.5 opacity-70 text-balance mb-4 text-sm">
+                        <p className="text-foreground mt-0.5 opacity-70 mb-4 text-sm">
                             Delivered a cohesive, reusable component library (hero, pricing, CTA, cards) that keeps Astrae’s brand consistent and ships new pages in hours—not weeks.
                         </p>
                     </div>
 
                     <div>
-                        <span className="text-xl font-semibold tracking-tighter">
+                        <span className=" text-base md:text-xl font-semibold tracking-tighter">
                             Sanity CMS + Editorial Workflow
                         </span>
-                        <p className="text-foreground mt-0.5 opacity-70 text-balance mb-4 text-sm">
+                        <p className="text-foreground mt-0.5 opacity-70 mb-4 text-sm">
                             Modeled blog content in Sanity with previews, drafts, and scheduled publishing. Authors can compose rich articles using portable blocks (callouts, embeds, code snippets) without dev support.
                         </p>
                     </div>
 
                     <div>
-                        <span className="text-xl font-semibold tracking-tighter">
+                        <span className=" text-base md:text-xl font-semibold tracking-tighter">
                             Conversion-Optimized Sign-Up Flow
                         </span>
-                        <p className="text-foreground mt-0.5 opacity-70 text-balance mb-4 text-sm">
+                        <p className="text-foreground mt-0.5 opacity-70 mb-4 text-sm">
                             Reworked pricing and sign-up with clear CTAs, fewer steps, and trust cues. Integrated analytics for event tracking and funnel visibility to guide experiment cycles.
                         </p>
                     </div>
 
                     <div>
-                        <span className="text-xl font-semibold tracking-tighter">
+                        <span className=" text-base md:text-xl font-semibold tracking-tighter">
                             Lemonsqueezy Affiliate Integration
                         </span>
-                        <p className="text-foreground mt-0.5 opacity-70 text-balance mb-4 text-sm">
+                        <p className="text-foreground mt-0.5 opacity-70 mb-4 text-sm">
                             Implemented an affiliate program powered by Lemonsqueezy—referral attribution, payouts, and dashboards—unlocking scalable partner-led growth.
                         </p>
                     </div>
                 </div>
 
-                <div className="w-full h-auto aspect-video relative overflow-clip rounded-lg mt-10">
+                <div className="w-full h-auto aspect-video relative overflow-clip  rounded-md md:rounded-lg mt-10">
                     <Image
                         src="/assets/astrae-login.png"
                         alt="Astrae login image"
@@ -222,20 +239,22 @@ const AstraeCaseStudyPage = () => {
                 </div>
             </section >
 
-            <section className=" w-full bg-muted p-8 mt-12">
+            <section className=" w-full bg-muted p-4 md:p-8 mt-12">
                 <h4 className=" text-base font-semibold text-white">Get in touch :–)</h4>
-                <div className=" inline-flex items-center gap-1 text-sm">
+                <div className=" md:inline-flex items-center gap-1 text-sm">
                     <span className="opacity-70">I can be easily reached at your convenience via</span>
-                    <Link href="" className=" opacity-100">
-                        <p className=" underline underline-offset-2">WhatsApp</p>
-                    </Link>
-                    <p>or</p>
-                    <Link href="" className=" opacity-100">
-                        <p className=" underline underline-offset-2">Email</p>
-                    </Link>
+                    <div className=" inline-flex items-center gap-1">
+                        <Link href="" className=" opacity-100">
+                            <p className=" underline underline-offset-2">WhatsApp</p>
+                        </Link>
+                        <p>or</p>
+                        <Link href="" className=" opacity-100">
+                            <p className=" underline underline-offset-2">Email</p>
+                        </Link>
+                    </div>
 
                 </div>
-                <div className=" flex items-center gap-2 mt-6">
+                <div className=" flex items-center gap-1  md:gap-2 mt-6">
                     <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
                     <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
                 </div>

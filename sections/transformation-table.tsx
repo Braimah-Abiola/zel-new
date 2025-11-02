@@ -90,16 +90,16 @@ const results = [
 
 export function TransformationTable() {
     return (
-        <section className=" w-full relative py-10 px-20">
-            <h3 className=" text-2xl font-semibold text-white tracking-tight mb-2">
+        <section className=" w-screen relative py-10 px-4 md:px-20 overflow-clip">
+            <h3 className=" text-lg md:text-2xl font-semibold text-white tracking-tight md:mb-2">
                 Before & After: Transformation Results
             </h3>
 
-            <span className=" opacity-70 font-medium md:mb-2 tracking-tighter">
+            <span className=" text-sm opacity-70 font-medium md:mb-2 tracking-tighter">
                 Website Performance Metrics
             </span>
 
-            <div className=" border mt-6 rounded-lg md:rounded-xl overflow-clip">
+            <div className=" border mt-2 md:mt-6 rounded-md md:rounded-xl overflow-clip">
                 <Table className="">
                     <TableHeader>
                         <TableRow>

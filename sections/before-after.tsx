@@ -3,7 +3,7 @@ import { Compare } from "./compare";
 const BeforeAndAfter = () => {
     return (
         <section className=" relative w-full px-4 md:px-20">
-            <h3 className=" text-2xl font-semibold text-white tracking-tight mb-4">
+            <h3 className=" text-lg md:text-2xl font-semibold text-white tracking-tight mb-2 md:mb-4">
                 Before & After Design
             </h3>
             <Compare
