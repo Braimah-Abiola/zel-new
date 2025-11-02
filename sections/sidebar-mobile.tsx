@@ -22,7 +22,7 @@ export function SidebarMobile() {
             </SheetTrigger>
             <SheetContent side="left">
                 <SheetTitle className=" hidden">Edit profile</SheetTitle>
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-full text-sm">
                     <Link href="/">
                         <div className="w-32 h-8 relative mx-6 my-4">
                             <Image
