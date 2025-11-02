@@ -3,11 +3,11 @@ import ProjectCard from "@/sections/project-card";
 import { Slash } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { BiLogoWhatsapp } from "react-icons/bi";
 import { FiLink2 } from "react-icons/fi";
 import { LuAtSign } from "react-icons/lu";
 import { PiClock, PiMapPinAreaLight } from "react-icons/pi";
 import { RiHome5Line } from "react-icons/ri";
-import { BiLogoWhatsapp } from "react-icons/bi";
 
 const HomePage = () => {
   return (
@@ -90,7 +90,7 @@ const HomePage = () => {
                 <p className=" opacity-50">Lead Product Designer</p>
               </div>
             </div>
-            <p className=" text-sm opacity-50">2020</p>
+            <p className=" text-sm opacity-50">2024</p>
           </div>
 
           <div className=" w-full flex items-center justify-between py-2.5">
