@@ -90,7 +90,7 @@ const results = [
 
 export function TransformationTable() {
     return (
-        <section className=" w-screen relative py-10 px-4 md:px-20 overflow-clip">
+        <section className=" w-screen md:w-full relative py-10 px-4 md:px-20 overflow-clip">
             <h3 className=" text-lg md:text-2xl font-semibold text-white tracking-tight md:mb-2">
                 Before & After: Transformation Results
             </h3>

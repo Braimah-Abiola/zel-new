@@ -125,13 +125,22 @@ const HomePage = () => {
       </section>
 
       <section className=" w-full px-4  md:px-20 mt-12 flex flex-col gap-8">
+
         <Link href="/case-study/astrae">
           <ProjectCard image="/assets/astrae-showcase.png" title="Astrae Design" description="Revamped website and increased conversions" role="Lead Designer" />
         </Link>
 
-        <ProjectCard image="/assets/meetingiq.png" title="Meeting IQ" description="Meeting IQ is an AI-powered insights for smarter sales prep." role="Web Designer" />
-        <ProjectCard image="/assets/skillura.png" title="Skillura" description="Skillura is designed to simplify hiring and training process for agencies." role="UI/UX Designer" />
-        <ProjectCard image="/assets/fetchtalent.png" title="FetchTalent AI" description="FetchTalent AI interviews candidates by phone or video 20/7. Career site AI chatbots. Conversation AI SMS. Instant interviews." role="Web Designer" />
+        <Link href="https://www.builtwithatlas.com/meeting-iq">
+          <ProjectCard image="/assets/meetingiq.png" title="Meeting IQ" description="Meeting IQ is an AI-powered insights for smarter sales prep." role="Web Designer" />
+        </Link>
+
+        <Link href="https://www.skillura.com/">
+          <ProjectCard image="/assets/skillura.png" title="Skillura" description="Skillura is designed to simplify hiring and training process for agencies." role="UI/UX Designer" />
+        </Link>
+
+        <Link href="https://www.fetchtalent.ai/">
+          <ProjectCard image="/assets/fetchtalent.png" title="FetchTalent AI" description="FetchTalent AI interviews candidates by phone or video 20/7. Career site AI chatbots. Conversation AI SMS. Instant interviews." role="Web Designer" />
+        </Link>
 
       </section>
 
@@ -140,19 +149,23 @@ const HomePage = () => {
         <div className=" md:inline-flex items-center gap-1 text-sm">
           <span className="opacity-70">I can be easily reached at your convenience via</span>
           <div className=" inline-flex items-center gap-1">
-            <Link href="" className=" opacity-100">
+            <Link href="https://wa.me/233546153204" className=" opacity-100">
               <p className=" underline underline-offset-2">WhatsApp</p>
             </Link>
             <p>or</p>
-            <Link href="" className=" opacity-100">
+            <Link href="mailto:denzelobeng421@gmail.com" className=" opacity-100">
               <p className=" underline underline-offset-2">Email</p>
             </Link>
           </div>
 
         </div>
         <div className=" flex items-center gap-1  md:gap-2 mt-6">
-          <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
-          <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+          <Link href="https://wa.me/233546153204">
+            <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
+          </Link>
+          <Link href="mailto:denzelobeng421@gmail.com">
+            <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+          </Link>
         </div>
       </section>
     </div>

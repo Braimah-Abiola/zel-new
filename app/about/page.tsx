@@ -155,19 +155,23 @@ const AboutPage = () => {
                 <div className=" md:inline-flex items-center gap-1 text-sm">
                     <span className="opacity-70">I can be easily reached at your convenience via</span>
                     <div className=" inline-flex items-center gap-1">
-                        <Link href="" className=" opacity-100">
+                        <Link href="https://wa.me/233546153204" className=" opacity-100">
                             <p className=" underline underline-offset-2">WhatsApp</p>
                         </Link>
                         <p>or</p>
-                        <Link href="" className=" opacity-100">
+                        <Link href="mailto:denzelobeng421@gmail.com" className=" opacity-100">
                             <p className=" underline underline-offset-2">Email</p>
                         </Link>
                     </div>
 
                 </div>
                 <div className=" flex items-center gap-1  md:gap-2 mt-6">
-                    <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
-                    <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+                    <Link href="https://wa.me/233546153204">
+                        <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
+                    </Link>
+                    <Link href="mailto:denzelobeng421@gmail.com">
+                        <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+                    </Link>
                 </div>
             </section>
         </div>

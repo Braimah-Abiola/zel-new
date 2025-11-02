@@ -30,7 +30,7 @@ const results = [
 
 export function BusinessImpactTable() {
     return (
-        <section className=" w-screen relative py-12 px-4 md:px-20">
+        <section className=" w-screen md:w-full relative py-12 px-4 md:px-20">
             <h3 className=" text-lg md:text-2xl font-semibold text-white tracking-tight md:mb-2">
                 Business Impact Achievements
             </h3>

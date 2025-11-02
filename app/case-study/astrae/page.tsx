@@ -31,7 +31,7 @@ const AstraeCaseStudyPage = () => {
             </section>
             <section className=" hidden md:block sticky top-0 z-50 text-sm">
                 <div className=" w-full flex items-center justify-between px-4 bg-muted py-1.5">
-                    <Link href="#">
+                    <Link href="/">
                         <span className="flex items-center px-2 py-1 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                             <p>Home</p>
                             <Slash className=" -rotate-24 size-4 opacity-50" />
@@ -244,19 +244,23 @@ const AstraeCaseStudyPage = () => {
                 <div className=" md:inline-flex items-center gap-1 text-sm">
                     <span className="opacity-70">I can be easily reached at your convenience via</span>
                     <div className=" inline-flex items-center gap-1">
-                        <Link href="" className=" opacity-100">
+                        <Link href="https://wa.me/233546153204" className=" opacity-100">
                             <p className=" underline underline-offset-2">WhatsApp</p>
                         </Link>
                         <p>or</p>
-                        <Link href="" className=" opacity-100">
+                        <Link href="mailto:denzelobeng421@gmail.com" className=" opacity-100">
                             <p className=" underline underline-offset-2">Email</p>
                         </Link>
                     </div>
 
                 </div>
                 <div className=" flex items-center gap-1  md:gap-2 mt-6">
-                    <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
-                    <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+                    <Link href="https://wa.me/233546153204">
+                        <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
+                    </Link>
+                    <Link href="mailto:denzelobeng421@gmail.com">
+                        <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+                    </Link>
                 </div>
             </section>
         </div>
