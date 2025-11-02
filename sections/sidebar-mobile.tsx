@@ -100,7 +100,7 @@ export function SidebarMobile() {
                                     <ArrowUpRight className=" size-4 opacity-50" />
                                 </li>
                             </Link>
-                            <Link href="https://www.linkedin.com/in/denzelobeng/">
+                            <Link href="http://linkedin.com/in/alan-obeng-peprah-b8b360310">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
                                         <PiLinkedinLogoLight className=" size-4 md:size-5" />
@@ -109,7 +109,7 @@ export function SidebarMobile() {
                                     <ArrowUpRight className=" size-4 opacity-50" />
                                 </li>
                             </Link>
-                            <Link href="https://twitter.com/denzelobeng">
+                            <Link href="https://twitter.com/imdenze_l">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
                                         <RiTwitterXFill className=" size-4 md:size-5" />
@@ -118,7 +118,7 @@ export function SidebarMobile() {
                                     <ArrowUpRight className=" size-4 opacity-50" />
                                 </li>
                             </Link>
-                            <Link href="/">
+                            <Link href="https://drive.google.com/file/d/1YERrrrWqeSZZn3CaB_jXQJ0H-hPecbIG/view?usp=drive_link">
                                 <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
                                     <div className=" inline-flex items-center gap-2">
                                         <PiNotebook className=" size-4 md:size-5" />
