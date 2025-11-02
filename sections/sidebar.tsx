@@ -1,0 +1,122 @@
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { LuAtSign } from "react-icons/lu";
+import { PiBinoculars, PiHandFist, PiHandshakeLight, PiLinkedinLogoLight, PiNotebook, PiPaintBrushLight, PiPencilCircleLight, PiSoccerBall } from "react-icons/pi";
+import { RiTwitterXFill } from "react-icons/ri";
+
+const Sidebar = () => {
+    return (
+        <aside className="fixed left-0 top-0 h-screen w-60 bg-muted border-r border-r-white/10 z-40">
+            <div className="flex flex-col h-full">
+                <div className="w-36 h-8 relative mx-6 my-4">
+                    <Image
+                        fill
+                        src="/assets/logo.png"
+                        alt="Zel Logo"
+                        className="object-contain"
+                    />
+                </div>
+                <nav className="flex flex-col h-full  px-4 gap-4">
+                    <Link href="#">
+                        <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                            <Image width={24} height={24} src="/assets/zel.png" alt="Denzel" />
+                            <p>About</p>
+                        </li>
+                    </Link>
+                    <ul className="flex flex-col">
+                        <span className=" opacity-50 mb-2 px-3">Interface</span>
+                        <Link href="#">
+                            <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <PiPaintBrushLight className=" size-4 md:size-5" />
+                                <p>Astrae Design</p>
+                            </li>
+                        </Link>
+
+                        <Link href="#">
+                            <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <PiHandshakeLight className=" size-4 md:size-5" />
+                                <p>Meeting IQ</p>
+                            </li>
+                        </Link>
+                        <Link href="#">
+                            <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <PiHandFist className=" size-4 md:size-5" />
+                                <p>Skillura</p>
+                            </li>
+                        </Link>
+                        <Link href="#">
+                            <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <PiBinoculars className=" size-4 md:size-5" />
+                                <p>FetchTalent</p>
+                            </li>
+                        </Link>
+                    </ul>
+
+                    <ul className="flex flex-col">
+                        <span className=" opacity-50 mb-2 px-3">Design Lead</span>
+                        <Link href="#">
+                            <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <PiPencilCircleLight className=" size-4 md:size-5" />
+                                <p>Bhyte Studios</p>
+                            </li>
+                        </Link>
+                    </ul>
+
+                    <ul className="flex flex-col">
+                        <span className=" opacity-50 mb-2 px-3">Side Projects</span>
+                        <Link href="#">
+                            <li className="flex items-center px-3 py-2 gap-2 rounded-md text-foreground/30 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <PiSoccerBall className=" size-4 md:size-5" />
+                                <p>Stakenet(wip)</p>
+                            </li>
+                        </Link>
+                    </ul>
+
+                    <ul className="flex flex-col">
+                        <span className=" opacity-50 mb-2 px-3">Contact</span>
+                        <Link href="#">
+                            <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <div className=" inline-flex items-center gap-2">
+                                    <LuAtSign className=" size-4" />
+                                    <p>Email</p>
+                                </div>
+                                <ArrowUpRight className=" size-4 md:size-5 opacity-50" />
+                            </li>
+                        </Link>
+                        <Link href="#">
+                            <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <div className=" inline-flex items-center gap-2">
+                                    <PiLinkedinLogoLight className=" size-4 md:size-5" />
+                                    <p>LinkedIn</p>
+                                </div>
+                                <ArrowUpRight className=" size-4 md:size-5 opacity-50" />
+                            </li>
+                        </Link>
+                        <Link href="#">
+                            <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <div className=" inline-flex items-center gap-2">
+                                    <RiTwitterXFill className=" size-4 md:size-5" />
+                                    <p>X</p>
+                                </div>
+                                <ArrowUpRight className=" size-4 md:size-5 opacity-50" />
+                            </li>
+                        </Link>
+                        <Link href="#">
+                            <li className="flex items-center justify-between px-3 py-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+                                <div className=" inline-flex items-center gap-2">
+                                    <PiNotebook className=" size-4 md:size-5" />
+                                    <p>Resume</p>
+                                </div>
+                                <ArrowUpRight className=" size-4 md:size-5 opacity-50" />
+                            </li>
+                        </Link>
+                    </ul>
+                </nav>
+                <span className=" p-6 opacity-70 text-sm">© Denzel Obeng, 2025</span>
+            </div>
+        </aside>
+    );
+}
+
+export default Sidebar;

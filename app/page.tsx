@@ -1,65 +1,143 @@
+import { Button } from "@/components/ui/button";
+import ProjectCard from "@/sections/project-card";
+import { Slash } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { FiLink2 } from "react-icons/fi";
+import { LuAtSign } from "react-icons/lu";
+import { PiClock, PiMapPinAreaLight } from "react-icons/pi";
+import { RiHome5Line } from "react-icons/ri";
+import { BiLogoWhatsapp } from "react-icons/bi";
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div>
+      <section className=" sticky top-0 z-20">
+        <div className=" w-full flex items-center justify-between px-4 bg-muted py-1">
+          <Link href="#">
+            <span className="flex items-center px-2 py-1 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+              <RiHome5Line className=" size-4 md:size-5" />
+              <p>Home</p>
+            </span>
+          </Link>
+
+          <Link href="#">
+            <span className="flex items-center px-2 py-1 gap-2 rounded-md text-foreground/70 hover:text-foreground hover:bg-sidebar-accent transition-colors">
+              <FiLink2 className=" size-4 md:size-5" />
+              <p>Copy Link</p>
+            </span>
+          </Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className=" flex items-center justify-center text-white text-sm py-1 bg-[#399E03]">
+          <p>Update coming soon.</p>
         </div>
-      </main>
+      </section>
+
+
+      <section className=" w-full px-14 py-12">
+        <Image width={52} height={52} src="/assets/zel.png" alt="Denzel" />
+        <h1 className=" mt-4 font-semibold text-lg md:text-2xl tracking-tight">UI/UX designer with focus on product thinking and craft.</h1>
+
+        <div className=" mt-2 opacity-80">
+          <p>I design and prototype digital products & visual interfaces.</p>
+          <p>Welcome to my small corner of web.</p>
+        </div>
+        <div className=" mt-2">
+          <p>Prev. <span className=" font-semibold">Astrae Design, Meeting IQ</span></p>
+        </div>
+
+        <div className=" w-full flex flex-wrap gap-6 mt-4">
+          <div className=" flex items-center gap-2 text-foreground opacity-70 hover:opacity-100">
+            <PiMapPinAreaLight className=" size-4 md:size-5" />
+            <p>Accra, Ghana</p>
+          </div>
+
+          <div className=" flex items-center gap-2 text-foreground opacity-70 hover:opacity-100">
+            <PiClock className=" size-4 md:size-5" />
+            <p>{new Date().toLocaleString('en-US', {
+              timeZone: 'Africa/Accra',
+              hour: 'numeric',
+              minute: '2-digit',
+              hour12: true
+            })}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className=" w-full px-14">
+        <span className=" opacity-50">Team</span>
+
+        <div>
+          <div className=" w-full border-b flex items-center justify-between py-4">
+            <div className=" flex items-center gap-2">
+              <Image width={24} height={24} className=" object-contain" src="/assets/bhyte.png" alt="Bhyte" />
+              <div className=" inline-flex items-center gap-0.5">
+                <span className=" text-lg font-semibold text-white">Bhyte Studios</span>
+                <Slash className=" -rotate-24 size-4 opacity-50" />
+                <p className=" opacity-50">Lead Designer</p>
+              </div>
+            </div>
+            <p className=" opacity-50">2025</p>
+          </div>
+
+          <div className=" w-full border-b flex items-center justify-between py-4">
+            <div className=" flex items-center gap-2">
+              <Image width={24} height={24} className=" object-contain" src="/assets/nativex.png" alt="NativeX" />
+              <div className=" inline-flex items-center gap-0.5">
+                <span className=" text-lg font-semibold text-white">NativeX AI</span>
+                <Slash className=" -rotate-24 size-4 opacity-50" />
+                <p className=" opacity-50">Lead Product Designer</p>
+              </div>
+            </div>
+            <p className=" opacity-50">2024</p>
+          </div>
+
+          <div className=" w-full flex items-center justify-between py-4">
+            <div className=" flex items-center gap-2">
+              <Image width={24} height={24} className=" object-contain" src="/assets/studio-ix.png" alt="Studio IX" />
+              <div className=" inline-flex items-center gap-0.5">
+                <span className=" text-lg font-semibold text-white">Studio IX</span>
+                <Slash className=" -rotate-24 size-4 opacity-50" />
+                <p className=" opacity-50">UI/UX Designer</p>
+              </div>
+            </div>
+            <p className=" opacity-50">2020–2021</p>
+          </div>
+        </div>
+      </section>
+
+      <section className=" w-full px-14 mt-12 flex flex-col gap-8">
+        <Link href="/case-study/astrae">
+          <ProjectCard image="/assets/astrae-showcase.png" title="Astrae Design" description="Revamped website and increased conversions" role="Lead Designer" />
+        </Link>
+
+        <ProjectCard image="/assets/meetingiq.png" title="Meeting IQ" description="Meeting IQ is an AI-powered insights for smarter sales prep." role="Web Designer" />
+        <ProjectCard image="/assets/skillura.png" title="Skillura" description="Skillura is designed to simplify hiring and training process for agencies." role="UI/UX Designer" />
+        <ProjectCard image="/assets/fetchtalent.png" title="FetchTalent AI" description="FetchTalent AI interviews candidates by phone or video 24/7. Career site AI chatbots. Conversation AI SMS. Instant interviews." role="Web Designer" />
+
+      </section>
+
+      <section className=" w-full bg-muted p-8 mt-12">
+        <h4 className=" text-lg font-semibold text-white">Get in touch :–)</h4>
+        <div className=" inline-flex items-center gap-1 opacity-70">
+          <span>I can be easily reached at your convenience via</span>
+          <Link href="">
+            <p className=" underline underline-offset-2">WhatsApp</p>
+          </Link>
+          <p>or</p>
+          <Link href="">
+            <p className=" underline underline-offset-2">Email</p>
+          </Link>
+
+        </div>
+        <div className=" flex items-center gap-2 mt-6">
+          <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><BiLogoWhatsapp />WhatsApp</Button>
+          <Button className=" bg-[#4A4A4A] text-white/90 hover:text-white hover:bg-[#4A4A4A]/90"><LuAtSign /> Email</Button>
+        </div>
+      </section>
     </div>
   );
 }
+
+export default HomePage;
